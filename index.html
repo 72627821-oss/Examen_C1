@@ -1,9 +1,97 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FoodRappi - Comida a tu puerta</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- HEADER -->
+    <header class="main-header">
+      <div class="logo">FoodRappi</div>
+      <nav class="nav-links">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#nosotros">Sobre Nosotros</a>
+      </nav>
+      <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </header>
+
+    <!-- BANNER HERO -->
+    <section class="hero">
+      <h1>Deliciosa comida a tu puerta</h1>
+      <p>Los mejores sabores directamente en tu hogar con FoodRappi</p>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+      <!-- CATÁLOGO -->
+      <section id="productos" class="catalog">
+        <h2>Nuestros Productos</h2>
+        <div class="products-grid">
+          <article class="product-card">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Ensalada César"
+            />
+            <h3>Ensalada César</h3>
+            <p>Lechuga romana, pollo a la parrilla, crutones y aderezo.</p>
+            <span class="price">S/ 25.00</span>
+            <button onclick="addToCart('Ensalada César', 25)">
+              Añadir al carrito
+            </button>
+          </article>
+
+          <article class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Combo Sushi" />
+            <h3>Combo Sushi</h3>
+            <p>24 piezas de roll surtido: California, Maki y Tempura.</p>
+            <span class="price">S/ 45.00</span>
+            <button onclick="addToCart('Combo Sushi', 45)">
+              Añadir al carrito
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- ASIDE DE PROMOCIONES -->
+      <aside class="promotions">
+        <h3>Promociones del Día</h3>
+        <p>
+          ¡20% de descuento en tu primer pedido usando el cupón
+          <strong>FOOD20</strong>!
+        </p>
+      </aside>
+    </main>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="about-section">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        Nuestra misión es llevar la mejor gastronomía local directamente a la
+        comodidad de tu hogar de forma rápida y confiable.
+      </p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact-section">
+      <h2>Contacto</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Tu Nombre" required />
+        <input type="email" placeholder="Tu Correo" required />
+        <textarea placeholder="Tu Mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2026 FoodRappi. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
